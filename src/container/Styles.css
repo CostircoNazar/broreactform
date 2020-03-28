@@ -1,6 +1,6 @@
 .containerForm > Form {
     display: flex;
     flex-direction: column;
-    color: #61dafb;
+    align-items: flex-end;
 }
 

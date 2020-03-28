@@ -1,5 +1,5 @@
 import React from 'react';
-import './DefaultButton.css'
+import './Styles.css'
 
 function SubmitButton(props) {
     return(

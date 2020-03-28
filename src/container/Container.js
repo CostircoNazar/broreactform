@@ -1,8 +1,8 @@
 import React from 'react';
-import Form from '../formComponent/Form.js';
-import './Container.css'
+import Form from '../form/Form.js';
+import './Styles.css'
 
-function Container() {
+export function Container() {
 
     return(
         <div className='containerForm'>
@@ -11,4 +11,4 @@ function Container() {
     )
 }
 
-export default Container
+
