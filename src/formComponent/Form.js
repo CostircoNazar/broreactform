@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Input from "../inputComponent/Input";
 import SubmitButton from "../buttonComponent/SubmitButton";
+import './Foms.css'
 
 function Form(props) {
     const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ function Form(props) {
     };
 
     return(
-        <form onSubmit={onSubmit}>
+        <form className='loginForm' onSubmit={onSubmit}>
             <Input
                     type='email'
                    placeholder='email'
