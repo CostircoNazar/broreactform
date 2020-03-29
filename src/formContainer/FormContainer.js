@@ -2,7 +2,7 @@ import React from 'react';
 import Form from '../form/Form.js';
 import './Styles.css'
 
-export function Container() {
+ function FormContainer() {
 
     return(
         <div className='containerForm'>
@@ -11,4 +11,5 @@ export function Container() {
     )
 }
 
+export default FormContainer
 
