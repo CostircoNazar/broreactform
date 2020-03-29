@@ -5,7 +5,7 @@ import './Styles.css'
  function FormContainer() {
 
     return(
-        <div className='containerForm'>
+        <div className='formContainer'>
             <Form/>
         </div>
     )
