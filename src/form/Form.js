@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Input from "../input/Input";
-import SubmitButton from "../button/SubmitButton";
+import SubmitButton from "../SubmitButton/SubmitButton";
 import './Foms.css'
 
 function Form(props) {
