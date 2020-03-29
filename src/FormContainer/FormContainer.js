@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../form/Form.js';
+import Form from '../Form/Form.js';
 import './styles.css'
 
  function FormContainer() {
