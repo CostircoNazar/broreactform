@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Input from "../input/Input";
+import Input from "../Input/Input";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import './Foms.css'
 
