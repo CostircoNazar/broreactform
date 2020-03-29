@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Input from "../Input/Input";
 import SubmitButton from "../SubmitButton/SubmitButton";
-import './Foms.css'
+import './Styles.css'
 
 function Form(props) {
     const [email, setEmail] = useState('');
