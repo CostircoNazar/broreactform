@@ -3,7 +3,7 @@ import './Styles.css'
 
 function SubmitButton(props) {
     return(
-        <button className='defaultButton'>{props.label}</button>
+        <button className='submitButton'>{props.label}</button>
     )
 }
 
