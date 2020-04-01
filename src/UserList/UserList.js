@@ -20,33 +20,32 @@ const usersInfo=[
 function UserList() {
     const [userId, setUserId] = useState(0);
 
-    const selectItemHandler=(id)=> {
+    const selectItemHandler = (id) => {
         if (id !== userId) {
             console.log(id);
             setUserId(id);
         }
     };
 
+    return (
+        <div className='userList'>
+            {usersInfo.map((value, index) => (
+                    <UserListItem
+                        key={index}
+                        id={value.id}
+                        userName={value.userName}
+                        userEmail={value.userEmail}
+                        isSelected={userId === value.id}
+                        onSelect={selectItemHandler}
 
-    return(
-        <div className='userListItem'>
-            {usersInfo.map((value,index)=> (
-                <UserListItem
-                    key={index}
-                    id={value.id}
-                    userName={value.userName}
-                    userEmail={value.userEmail}
-                    isSelected={userId === value.id}
-                    onSelect={selectItemHandler}
-                />
+                    />
 
-                    )
                 )
+            )
             }
 
         </div>
     )
-
 }
 
 export default UserList

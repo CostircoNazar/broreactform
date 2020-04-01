@@ -1,17 +1,20 @@
-.userListItem {
+.userList {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: auto;
     max-width: 200px;
+    width: 200px;
     max-height: 100%;
     border: 2px solid black;
 }
-.userListItem .userList {
-    max-width: inherit;
-}
 
-.userListItem .userList span {
-    display: flex;
-    flex-wrap: wrap;
+.userList .userListItem{
+    border: 2px solid green;
+    max-height:50px;
+    width: inherit;
 }
+ .userList .userListItem span {
+     display: flex;
+     flex-wrap: wrap;
+ }
