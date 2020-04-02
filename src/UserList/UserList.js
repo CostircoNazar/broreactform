@@ -2,20 +2,22 @@ import React,{useState} from 'react';
 import UserListItem from "./component/UserListItem";
 import './styles.css'
 
+
 const usersInfo=[
     {
         id:1,
         userName:'user',
         userEmail:'user@email.com',
-        isSelected: false
+        isSelected: true
     } ,
     {
         id:2,
         userName:'user',
         userEmail:'user@email.com',
-        isSelected:false
+        isSelected:true
     }
 ];
+
 
 function UserList() {
     const [userId, setUserId] = useState(0);
@@ -27,8 +29,10 @@ function UserList() {
         }
     };
 
+
     return (
         <div className='userList'>
+
             {usersInfo.map((value, index) => (
                     <UserListItem
                         key={index}
@@ -37,11 +41,11 @@ function UserList() {
                         userEmail={value.userEmail}
                         isSelected={userId === value.id}
                         onSelect={selectItemHandler}
-
                     />
 
+                    )
                 )
-            )
+
             }
 
         </div>
