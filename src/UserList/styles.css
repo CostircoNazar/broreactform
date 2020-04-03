@@ -1,11 +1,9 @@
 .userList {
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
     justify-content: flex-start;
     margin: auto;
     max-width: 200px;
-    width: 100%;
     height: 100%;
 }
 
@@ -16,7 +14,6 @@
 }
 .userListItemIsSelected{
     border: 2px solid green;
-    width: inherit;
 }
  span {
     display: block;
