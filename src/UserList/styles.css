@@ -1,0 +1,22 @@
+.userList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+    max-width: 200px;
+    height: 100%;
+}
+
+.userListItem{
+    border: 2px solid black;
+    flex: 1;
+    height: 50px;
+}
+.userListItemIsSelected{
+    border: 2px solid green;
+}
+ span {
+    display: block;
+}
+
+
