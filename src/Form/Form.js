@@ -3,7 +3,7 @@ import Input from "../Input/Input";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import './styles.css'
 
-function Form(props) {
+function Form() {
     const [email, setEmail] = useState('');
     const [password,setPassword] = useState('');
 
