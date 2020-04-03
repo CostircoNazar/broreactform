@@ -5,13 +5,12 @@ function UserListItem({id, userName, userEmail, isSelected, onSelect}){
 
 
     return(
-        <div className= {isSelected ? 'userListItem' : ''}
+        <div className= {'userListItem ' + (isSelected ? 'userListItemIsSelected' : ' ')}
              onClick={()=>onSelect(id)}>
 
             <span>{userName}</span>
             <span>{userEmail}</span>
 
-            {console.log(isSelected + ' isSelected')}
         </div>
     )
 }
