@@ -9,7 +9,6 @@ import TabBar from "../TabBar/TabBar";
         <div className='formContainer'>
             <TabBar/>
             <Form/>
-
         </div>
     )
 }

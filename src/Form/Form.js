@@ -3,29 +3,36 @@ import Input from "../Input/Input";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import './styles.css'
 
-function Form() {
-    const [email, setEmail] = useState('');
-    const [password,setPassword] = useState('');
 
-    const onSubmit= ()=> {
-        alert('email ' + email + ' password ' + password);
+function Form(props) {
+    const [email, setEmail] = useState(props.initValues.email);
+    const [password,setPassword] = useState(props.initValues.password);
+
+
+    const onPreSubmit= ()=> {
+        props.onSubmit(email,password)
     };
 
+
     return(
-        <form className='loginForm' onSubmit={onSubmit}>
-            <Input
+        <form className='loginForm' onSubmit={onPreSubmit} name={props.name} >
+                <Input
                     type='email'
-                   placeholder='email'
-                   name='email'
-                   value={email}
-                   onChange={(e)=>setEmail(e.target.value)}
-            />
+                    autoComplete=''
+                    placeholder='email'
+                    name='email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
             <Input
-                    type='password'
-                   placeholder='password'
-                   name='password'
-                   value={password}
-                   onChange={(e)=>setPassword(e.target.value)}
+                type='password'
+                placeholder='password'
+                autoComplete=''
+                name='password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+
+
             />
             <SubmitButton label='Submit'/>
         </form>

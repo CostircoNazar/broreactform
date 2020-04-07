@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.css';
-import FormContainer from "./FormContainer/FormContainer";
-import UserList from "./UserList/UserList";
+import LoginPage from "./LoginPage/LoginPage";
 
+
+
+export default App;
 
 function App() {
   return (
-    <div className="App">
-        <UserList/>
-        <FormContainer/>
-
-    </div>
+      <div >
+        <LoginPage />
+      </div>
   );
 }
-
-export default App;
