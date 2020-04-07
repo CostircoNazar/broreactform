@@ -1,30 +1,29 @@
-import React,{useState} from'react';
+import React from'react';
 import TabBarButton from "./Components/TapBarButton";
 
 const initSchema=[
     {
-        id: 'Register',
+        id: 'register',
         label:'New Account',
     },
     {
-        id: 'Login',
-        label:'Sign In',
+        id: 'login',
+        label:'Log in',
     }
 ];
 
-function TabBar(){
-    const[tabBarButtonId, setTabBarButtonId]=useState('Login');
+function TabBar(props){
 
     return(
         <div>
             {initSchema.map(({id,label},index)=>{
                 return (
                     <TabBarButton
-                        key={index}
-                        isSelected={tabBarButtonId === id}
-                        onClick = { (id)=> {
-                            if (tabBarButtonId !== id){
-                                setTabBarButtonId(id)
+                        key={index.toString()}
+                        isSelected={props.tabBarButtonId === id}
+                        onClick = { ()=> {
+                            if (props.tabBarButtonId !== id){
+                                props.setTabBarButtonId(id);
                             }
                           }
                         }

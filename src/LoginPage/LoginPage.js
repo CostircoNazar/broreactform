@@ -26,10 +26,9 @@ function LoginPage() {
                     setTabBarButtonId={setTabBarButtonId}
 
             />
-
             {tabBarButtonId === 'login' ?
-                <Form onSubmit={handleLogin} initValues={login} name='Logged'/> :
-                <Form onSubmit={handleSignUp} initValues={signUp} name='new'/>
+                <Form key='login' onSubmit={handleLogin} initValues={login} name='Logged'/> :
+                <Form key='register' onSubmit={handleSignUp} initValues={signUp} name='new'/>
             }
 
         </div>
