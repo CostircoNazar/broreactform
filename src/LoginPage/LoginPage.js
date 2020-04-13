@@ -1,4 +1,4 @@
-import React, {useState} from'react';
+import React, {useState,useEffect} from'react';
 import Form from "../Form/Form";
 import TabBar from "../TabBar/TabBar";
 import './styles.css'
@@ -18,6 +18,14 @@ function LoginPage() {
          };
 
 
+    const handleChanges=(inputData)=> {
+        setLogin({email: inputData.email, password: inputData.password})
+
+    };
+
+    useEffect(()=>{
+        console.log('state is changed');
+    },[tabBarButtonId])
 
     return(
         <div className='loginPage'>
@@ -27,8 +35,17 @@ function LoginPage() {
 
             />
             {tabBarButtonId === 'login' ?
-                <Form key='login' onSubmit={handleLogin} initValues={login} name='Logged'/> :
-                <Form key='register' onSubmit={handleSignUp} initValues={signUp} name='new'/>
+                <Form key='login'
+                      handleChanges={handleChanges}
+                      onSubmit={handleLogin}
+                      initValues={login}
+                      name='Logged'/>
+                      :
+                <Form key='register'
+                      handleChanges={handleChanges}
+                      onSubmit={handleSignUp}
+                      initValues={signUp}
+                      name='new'/>
             }
 
         </div>
