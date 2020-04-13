@@ -5,9 +5,6 @@ import './styles.css'
 
 
 function Form(props) {
-    const [email, setEmail] = useState(props.initValues.email);
-    const [password,setPassword] = useState(props.initValues.password);
-
 
     const onPreSubmit= ()=> {
         props.onSubmit(email,password)
