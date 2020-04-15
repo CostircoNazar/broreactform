@@ -18,9 +18,11 @@ function LoginPage() {
          };
 
 
-    const handleChanges=(inputData)=> {
-        setLogin({email: inputData.email, password: inputData.password})
-
+    const handleChanges=(inputData, name)=> {
+      if (tabBarButtonId==='login') {
+          setLogin( {...login,[name]:inputData})}
+      if (tabBarButtonId==='register'){
+          setSingUp({...signUp, [name]:inputData})}
     };
 
     useEffect(()=>{

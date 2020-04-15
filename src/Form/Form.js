@@ -10,8 +10,8 @@ function Form(props) {
         props.onSubmit(props.initValues.email,props.initValues.password)
     };
 
-    const getValue=(inputData)=> {
-        props.handleChanges(inputData)
+    const getValue=(inputData, name)=> {
+        props.handleChanges(inputData, name)
     };
 
     return(
@@ -22,7 +22,7 @@ function Form(props) {
                     placeholder='email'
                     name='email'
                     value={props.initValues.email}
-                    onChange={(e) => getValue(e.target.value)}
+                    onChange={(e) => getValue(e.target.value, 'email')}
                 />
             <Input
                 type='password'
@@ -30,7 +30,7 @@ function Form(props) {
                 autoComplete=''
                 name='password'
                 value={props.initValues.password}
-                onChange={(e) => getValue(e.target.value)}
+                onChange={(e) => getValue(e.target.value, 'password')}
 
 
             />
